@@ -1,0 +1,81 @@
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-blue-dark-mode-layers-5k-3840x2160-5895.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+
+.home-container {
+    height: 250px; /* Slightly increased height for better spacing */
+    width: 450px;  /* Increased width for better layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; /* Slightly rounded corners for smooth edges */
+    background: rgba(255, 255, 255, 0.15); /* More transparent for glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Softer, subtle border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Enhanced shadow for depth */
+    backdrop-filter: blur(12px); /* Stronger blur for a glass-like effect */
+    -webkit-backdrop-filter: blur(12px);
+    padding: 25px; /* Consistent padding */
+    text-align: center;
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Optional: Add hover effect */
+.home-container:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  .button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    display: flex;
+  }
+  
+ .balogo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: absolute;
+    right: 36px;
+    top: 28px;
+ }
+ .title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    
+ }
