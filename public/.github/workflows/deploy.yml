@@ -1,0 +1,36 @@
+name: Deploy React App   # Name of the workflow
+
+on:
+  push:
+    branches:
+      - main  # Runs when code is pushed to "main"
+  pull_request:
+    branches:
+      - main  # Runs on pull requests to "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Runs on a Linux environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Pulls latest code from GitHub
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  # Sets up Node.js environment
+
+      - name: Install dependencies
+        run: npm install  # Installs required packages
+
+      - name: Run tests
+        run: npm test --if-present  # Runs any available test cases
+
+      - name: Build project
+        run: npm run build  # Creates optimized production build
+
+      - name: Deploy to Vercel
+        run: |
+          npm install -g vercel
+          vercel --token=${{ secrets.VERCEL_TOKEN }} --prod --confirm
